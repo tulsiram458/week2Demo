@@ -41,5 +41,9 @@ managers$AgeCat[managers$Age <= 25] <- "young"
 
 managers
 
+managers$AgeCat[is.na(managers$Age)] <- "Elder"
+
+managers
+
 
 
