@@ -45,5 +45,20 @@ managers$AgeCat[is.na(managers$Age)] <- "Elder"
 
 managers
 
+modified_AgeCat <- factor(managers$AgeCat, ordered = TRUE, levels = c() )
+
+managers$AgeCat <- modified_AgeCat
+str(managers)
 
 
+summary_col <- managers$Q1+managers$Q2+managers$Q3+managers$Q4+managers$Q5
+
+summary_col
+
+m <- data.frame(managers$Q1+managers$Q2+managers$Q3+managers$Q4+managers$Q5)
+
+m
+
+managers <- data.frame(managers,summary_col)
+
+managers
